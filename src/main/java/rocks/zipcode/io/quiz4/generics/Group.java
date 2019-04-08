@@ -16,6 +16,10 @@ public class Group<_> implements GroupInterface{
         this.list = new ArrayList<>();
     }
 
+    public Group(List<_> list) {
+        this.list = list;
+    }
+
     public Integer count() {
         return list.size();
     }
@@ -49,16 +53,7 @@ public class Group<_> implements GroupInterface{
 
     @Override
     public String toString(){
-        StringBuilder sb = new StringBuilder();
-        sb.append("[");
-        for (_ object : list){
-            sb.append(object)
-            .append(", ");
-        }
-        sb.append("]");
-        sb.deleteCharAt(sb.length() - 2);
-        sb.deleteCharAt(sb.length() - 2);
-        return sb.toString();
+        return list.toString();
     }
 
     @Override
